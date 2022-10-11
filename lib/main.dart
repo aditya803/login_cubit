@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-
-import 'Screens/HomePage.dart';
-import 'Screens/RegisterPage.dart';
+import 'package:login_cubit/Login/Screens/LoginPage.dart';
+import 'package:login_cubit/Login/Screens/SignUpPage.dart';
 
 void main(){
   runApp(MyApp());
@@ -14,9 +13,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Login Cubit',
-      home: HomePage(title: 'Cubit Login'),
+      home: LoginPage(title: 'Cubit Login'),
       routes: {
-        '/First' : (_) => const RegisterPage(),
+        '/First' : (_) => const SignUpPage(),
       },
     );
   }

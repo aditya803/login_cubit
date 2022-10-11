@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'Screens/HomePage.dart';
+import 'Screens/RegisterPage.dart';
 
 void main(){
   runApp(MyApp());
@@ -11,13 +12,12 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       title: 'Login Cubit',
-      // routes: {
-      //   '/' : (BuildContext context) => HomePage(title: 'Cubit Login')
-      //  '/SignUp' : (BuildContext context) => RegisterPage(),
-      // },
       home: HomePage(title: 'Cubit Login'),
+      routes: {
+        '/First' : (_) => const RegisterPage(),
+      },
     );
   }
 }

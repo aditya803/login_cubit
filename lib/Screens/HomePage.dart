@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:login_cubit/Screens/RegisterPage.dart';
+
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key, required this.title});
@@ -28,10 +28,6 @@ class _HomePageState extends State<HomePage> {
                   icon: Icon(Icons.person),
                   labelText: 'Email',
                 ),
-                // onSaved: (String? value) {
-                //   // This optional block of code can be used to run
-                //   // code when the user saves the form.
-                // },
                 validator: (String? value) {
                   return (value != null && value.contains('@'))
                       ? 'Do not use the @ char.'
@@ -66,8 +62,7 @@ class _HomePageState extends State<HomePage> {
                   TextButton(onPressed: () {}, child: Text('Login')),
                   TextButton(
                       onPressed: () {
-                        Navigator.of(context).push(MaterialPageRoute(
-                            builder: (context) => RegisterPage()));
+                        Navigator.of(context).pushNamed('/First');
                       },
                       child: Text('New User?')),
                 ])
